@@ -1,10 +1,7 @@
 #include "cmplxpol_s86689.h"
-cmplxpol::cmplxpol(double betrag){
-    ph = betrag;
-    bt = betrag;
+
+cmplxpol::cmplxpol(void){ 
+    bt = 0.0;
+    ph = 0.0;
 }
 
-double cmplxpol::abds(double zusatz){
-    double mii=bt*ph+zusatz;
-    return mii;
-}

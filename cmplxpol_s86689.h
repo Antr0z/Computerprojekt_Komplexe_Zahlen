@@ -1,15 +1,18 @@
 #pragma once
 class cmplxpol{
     private:
-        double bt;
-        double ph;
+        double bt, ph;
     public:
-        cmplxpol(double betrag);
-//        double real();
-//        double imag();
-        double abds(double betrag);
-//        double arg();
-//        double arg_rad();
-//        double set_pol();
-//        double drucke();
+        cmplxpol(void); //Standart-Konstruktor
+        cmplxpol(double bt,double ph); //Parametisierbarer Konstruktor für Betrag und Phase
+        cmplxpol(double real, double imag); //Parametisierbarer Konstruktor für Real- und Imaginärteil
+        cmplxpol(double );
+        cmplxpol();
+        double real();
+        double imag();
+        double abs();
+        double arg();
+        double arg_rad();
+        double set_pol();
+        double drucke();
 };

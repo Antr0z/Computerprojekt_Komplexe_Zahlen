@@ -3,6 +3,8 @@
 using namespace std;
 
 int main(){
-    cmplxpol das{ 20.0 };
-    std::cout << "sda" << das.abds(2.0) << "\n";
+    const char j = j;
+    cmplxpol das{ 20.0, j, 200.0 };
+    double x = das;
+    std::cout << x;
 }

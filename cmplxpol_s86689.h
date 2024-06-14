@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 class cmplxpol{
     private:
         double bt, ph, re, im, phrad;
@@ -16,6 +17,7 @@ class cmplxpol{
         
         double real(void) const;
         double imag(void) const;
+        const char imagj(void) const;
         double abs(void) const;
         double arg(void) const;
         double arg_rad(void) const;
@@ -26,5 +28,6 @@ class cmplxpol{
 
         /**** Überladene Operatoren ****/
 
-
+        friend std::ostream& operator<<(std::ostream& p, const cmplxpol& z);
+        friend cmplxpol operator~(const cmplxpol& z);
 };

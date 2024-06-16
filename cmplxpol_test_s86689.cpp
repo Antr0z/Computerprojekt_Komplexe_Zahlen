@@ -185,21 +185,22 @@ int main(){
     std::cout << "werte für test2: " << test2 << "\n";
     std::cout << "ist test1 > test2?\n";
     if(test1 > test2){
-        std::cout << "WAHR";
+        std::cout << "WAHR\n";
     }
+    
     std::cout << "ist test1 < test2?\n";
     if(test1 < test2){
-        std::cout << "FALSCH";
-    }else std::cout << "WAHR";
+        std::cout << "FALSCH\n";
+    }else std::cout << "WAHR\n";
 
     std::cout << "ist test1 == test2?\n";
     if(test1 == test2){
-        std::cout << "WAHR";
-    }else std::cout << "FALSCH";
+        std::cout << "WAHR\n";
+    }else std::cout << "FALSCH\n";
 
     std::cout << "ist test1 != test2?\n";
     if(test1 < test2){
-        std::cout << "WAHR";
-    }else std::cout << "FALSCH";
+        std::cout << "WAHR\n";
+    }else std::cout << "FALSCH\n";
 }
     

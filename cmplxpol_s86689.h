@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CMPLXPOL_H_
+#define CMPLXPOL_H_
 #include <iostream>
 class cmplxpol{
     private:
@@ -24,10 +25,29 @@ class cmplxpol{
         void set_pol(double betrag, double phase);
         void set_pol(double real,const char complxj, double imag);
         void set_pol(const cmplxpol& z);
-        void drucke();
+        void drucke(const cmplxpol& z);
 
         /**** Überladene Operatoren ****/
 
         friend std::ostream& operator<<(std::ostream& p, const cmplxpol& z);
         friend cmplxpol operator~(const cmplxpol& z);
+        friend cmplxpol operator+(const cmplxpol& z1, const cmplxpol& z2);
+        friend cmplxpol operator-(const cmplxpol& z1, const cmplxpol& z2);
+        friend cmplxpol operator*(const cmplxpol& z1, const cmplxpol& z2);
+        friend cmplxpol operator/(const cmplxpol& z1, const cmplxpol& z2);
+        friend double operator+=(cmplxpol& z1, const cmplxpol z2);
+        friend double operator-=(cmplxpol& z1, const cmplxpol z2);
+        friend double operator*=(cmplxpol& z1, const cmplxpol z2);
+        friend double operator/=(cmplxpol& z1, const cmplxpol z2);
+        friend cmplxpol operator+(const cmplxpol& z);
+        friend cmplxpol operator-(const cmplxpol& z);
+        friend cmplxpol operator++(const cmplxpol& z);
+        cmplxpol operator++(int);
+        cmplxpol operator--(int);
+        friend cmplxpol operator--(const cmplxpol& z);
+        friend bool operator==(const cmplxpol& z1, const cmplxpol& z2);
+        friend bool operator!=(const cmplxpol& z1, const cmplxpol& z2);
+        friend bool operator<(const cmplxpol& z1, const cmplxpol& z2);
+        friend bool operator>(const cmplxpol& z1, const cmplxpol& z2);
 };
+#endif

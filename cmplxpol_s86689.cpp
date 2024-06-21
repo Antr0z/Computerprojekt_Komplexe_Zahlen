@@ -360,8 +360,8 @@ cmplxpol operator-(const cmplxpol& z){                                  //Präfi
     return cmplxpol(-1*z.re,z.imagj() , -1*z.im);                       //der ausgabe operator verträgt sich damit nicht weil aus irgendeinem grund der Konvertierungskonstruktor aufgerufen wird
 }
 
-cmplxpol operator++(const cmplxpol& z){                                 //Addition einer Einheit
-    return cmplxpol(1 + z.re, z.imagj(), 1 + z.im);
+cmplxpol cmplxpol::operator++(void){                                    //Addition einer Einheit
+    return (*this = cmplxpol(1 + re, imagj(), 1 + im));
 }
 
 cmplxpol cmplxpol::operator++(int){                                     //Addition einer Einheit als Postfix

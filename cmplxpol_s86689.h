@@ -69,7 +69,7 @@ class cmplxpol{
 
         friend cmplxpol operator-(const cmplxpol& z);                           //Überladung des Minus Operators als Präfix
 
-        friend cmplxpol operator++(const cmplxpol& z);                          //Überladung des ++ Operator als Präfix
+        cmplxpol operator++(void);                          //Überladung des ++ Operator als Präfix
         cmplxpol operator++(int);                                               //und Postfix
                                                                
         friend cmplxpol operator--(const cmplxpol& z);                          //Überladung des -- Operator als Präfix
